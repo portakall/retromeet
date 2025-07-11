@@ -1,0 +1,45 @@
+/* style.css */
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Optional: Add a background color */
+    padding: 10px; /* Optional: Add some padding */
+    display: flex;
+    align-items: center; /* Vertically align items */
+}
+
+.stTextInput {
+    flex-grow: 1; /* Allow text input to take up remaining space */
+    margin-right: 10px; /* Add some space between input and button */
+    border-radius: 20px; /* Add rounded corners */
+    padding: 10px 15px; /* Add padding inside the input */
+    border: 1px solid #e0e0e0; /* Add a subtle border */
+}
+
+.stButton button {
+    border-radius: 20px; /* Match button border radius */
+    padding: 10px 15px;
+}
+
+.spinner-container {
+    position: absolute;
+    bottom: 60px; /* Adjust as needed to position above the fixed bottom bar */
+    left: 10px;
+}
+
+.chat-message {
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.user-message {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+.bot-message {
+    background: #007bff;
+    color: white;
+}
