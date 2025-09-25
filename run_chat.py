@@ -11,11 +11,16 @@ from backend.chat_interface import launch_chat
 load_dotenv()
 
 if __name__ == "__main__":
-    # Get configuration from environment variables
-    gradio_host = "localhost"  # Force to localhost for testing
+    import argparse
     
-    # Use port 8080 to avoid any potential conflicts
-    gradio_port = 8080
+    # Set up argument parser
+    parser = argparse.ArgumentParser(description='Run the Gradio chat interface')
+    parser.add_argument('--port', type=int, default=8081, help='Port to run the Gradio interface on')
+    args = parser.parse_args()
+    
+    # Get configuration from environment variables and arguments
+    gradio_host = "localhost"  # Force to localhost for testing
+    gradio_port = args.port  # Use the provided port or default to 8081
     
     print(f"Starting RetroMeet Chat Interface at http://{gradio_host}:{gradio_port}", flush=True)
     print("This will create a shareable link for collecting responses from participants", flush=True)

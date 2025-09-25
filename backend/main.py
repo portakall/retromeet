@@ -38,7 +38,8 @@ STATIC_DIR = pathlib.Path(__file__).parent.parent / "frontend" / "static"
 app.mount("/static", StaticFiles(directory=str(STATIC_DIR)), name="static")
 
 # Set up templates
-templates = Jinja2Templates(directory="../frontend/templates")
+templates_dir = os.path.join(PROJECT_ROOT, "frontend", "templates")
+templates = Jinja2Templates(directory=templates_dir)
 
 # Include routers
 app.include_router(projects.router)

@@ -16,6 +16,8 @@ import Participants from './pages/Participants';
 import Responses from './pages/Responses';
 import Topics from './pages/Topics';
 import Summary from './pages/Summary';
+import Settings from './pages/Settings';
+import Help from './pages/Help';
 
 const theme = createTheme({
   palette: {
@@ -96,6 +98,8 @@ function App() {
             <Route path="/projects/:projectId/responses" element={<Responses />} />
             <Route path="/projects/:projectId/topics" element={<Topics />} />
             <Route path="/projects/:projectId/summary" element={<Summary />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/help" element={<Help />} />
           </Routes>
         </Box>
       </Box>
