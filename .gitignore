@@ -60,3 +60,9 @@ Thumbs.db
 
 # Mac OS files
 .DS_Store
+
+# Node modules and cache
+node_modules/
+.cache/
+frontend/react-admin/node_modules/
+frontend/react-admin/.cache/
